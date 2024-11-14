@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> oi amigo. feliz aniversário! não tenho dinheiro para presente, mas faço programa rsrs</h1>
+    <h1> oi amigo. feliz aniversário! não tenho dinheiro para presente, mas faço programa rsrs (usuario de chatgpt)</h1>
 
-    <a class="button"></a>
+    <H2> CLIQUE NO BOTÃO VERMELHO</H2>
+    <a href="index2.html" class="button"></a>
+<br>
+    <a href="index3.html" class="button2"></a>
+
+    <script>
+        // Função para redirecionar se o botão azul for clicado
+        document.getElementById('blueButton').onclick = function() {
+            window.location.href = 'index3.html';
+        };
+
+        // Função para exibir uma mensagem ou ação caso o botão vermelho seja clicado
+        document.getElementById('redButton').onclick = function() {
+            document.getElementById('message').textContent = 'Você acertou!';
+
+            // Pode adicionar aqui uma ação para indicar que foi o botão certo, se quiser.
+        };
+    </script>
 
 </body>
 </html>

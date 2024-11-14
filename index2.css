@@ -1,0 +1,102 @@
+/* Estilo da página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Remove a limitação de altura */
+    background: url('lis.avif') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo da tela */
+    text-align: center;
+    padding-top: 100px; /* Espaço superior para empurrar os pop-ups para baixo */
+    min-height: 100vh; /* Garante que a altura da página ocupe toda a tela */
+    overflow-y: auto; /* Permite rolagem vertical */
+    position: relative; /* Necessário para os confetes aparecerem no topo */
+}
+
+/* Container para os pop-ups */
+.popups-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os pop-ups horizontalmente */
+    gap: 20px; /* Espaçamento entre os pop-ups */
+    z-index: 10;
+}
+
+/* Estilo dos pop-ups */
+.popup {
+    background-color: #fff; /* Fundo branco */
+    color: #000; /* Texto preto */
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo dentro do pop-up */
+    max-height: 80vh; /* Limita a altura do pop-up para não ultrapassar a tela */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder a altura */
+}
+
+/* Estilo do texto dentro do pop-up */
+.popup-text {
+    font-size: 1.5em;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem do primeiro pop-up */
+.popup-image {
+    width: 100%;
+    height: 300px;
+    background: url('lispop.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Estilo da imagem do segundo pop-up (foto nossa) */
+.popup-image-photo {
+    width: 100%;
+    height: 300px;
+    background: url('agente.png') no-repeat center center; /* Coloque o nome correto da foto */
+    background-size: cover;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+/* Confetes */
+.confete {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00; /* Cor amarela dos confetes */
+    border-radius: 50%;
+    animation: cair 4s infinite;
+}
+
+/* Animação de queda dos confetes */
+@keyframes cair {
+    0% {
+        transform: translateY(-100vh) rotate(0deg); /* Começa acima da tela */
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg); /* Cai para o final da tela */
+        opacity: 0;
+    }
+}
+
+/* Adicionando mais cores aos confetes para tornar o efeito mais colorido */
+.confete:nth-child(odd) {
+    background-color: #ff6347; /* Vermelho */
+    animation-duration: 3s; /* Duração diferente */
+}
+
+.confete:nth-child(even) {
+    background-color: #32cd32; /* Verde */
+    animation-duration: 5s; /* Duração diferente */
+}
